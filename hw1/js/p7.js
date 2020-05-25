@@ -6,4 +6,4 @@ let S = 2,
     p = 10,
     years = 5,
     Pereplata = S * (p / 100) * years;
-    console.log('Переплата по кредиту = ' + Pereplata + ' млн.руб');
+console.log('Переплата по кредиту = ' + Pereplata + ' млн.руб');
