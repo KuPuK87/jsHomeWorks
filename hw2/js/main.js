@@ -55,17 +55,18 @@ if (sum1 == sum2) {
 // Проверьте работу скрипта при a, равном 1, 0, -3.
 
 console.log('---Task 4---');
-document.write('<b>---Task 4---</b><br>');
+document.write('<b>---Task 4---</b><br> В консоли <br>');
+
 
 let a = 1;
 
-
 (a > 0) ? console.log('Верно') : console.log('Неверно');
+
 
 a = 0;
 
-
 (a > 0) ? console.log('Верно') : console.log('Неверно');
+
 
 a = -1;
 
