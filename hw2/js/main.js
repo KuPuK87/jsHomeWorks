@@ -87,6 +87,8 @@ let b = 2,
     umn = a * b,
     summ2 = summ + minus + del + umn;
 
+    document.write(summ + ', ', minus + ',', del + ',', umn  + '<br>');
+
 if (summ2 > 1) console.log(summ2, summ2 ** 2);
 if (summ2 > 1) document.write(summ2 + ', ', summ2 ** 2 + '<br>');
 
