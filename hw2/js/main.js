@@ -59,19 +59,15 @@ document.write('<b>---Task 4---</b><br>');
 
 let a = 1;
 
-document.write('a = 1 , это больше чем 0? <br>');
 
 (a > 0) ? console.log('Верно') : console.log('Неверно');
 
 a = 0;
 
-document.write('a = 0 , это больше чем 0? <br>');
 
 (a > 0) ? console.log('Верно') : console.log('Неверно');
 
 a = -1;
-
-document.write('a = -1 , это больше чем 0? <br>');
 
 (a > 0) ? console.log('Верно') : console.log('Неверно');
 
