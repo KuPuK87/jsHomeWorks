@@ -58,38 +58,22 @@ console.log('---Task 4---');
 document.write('<b>---Task 4---</b><br>');
 
 let a = 1;
+
 document.write('a = 1 , это больше чем 0? <br>');
 
-if (a > 0) {
-    console.log('Верно');
-    document.write('<i>Верно</i><br>');
-} else {
-    console.log('Неверно')
-    document.write('<i>Неверно</i><br>');
-}
+(a > 0) ? console.log('Верно') : console.log('Неверно');
 
 a = 0;
+
 document.write('a = 0 , это больше чем 0? <br>');
 
-if (a > 0) {
-    console.log('Верно');
-    document.write('<i>Верно</i><br>');
-} else {
-    console.log('Неверно')
-    document.write('<i>Неверно</i><br>');
-}
+(a > 0) ? console.log('Верно') : console.log('Неверно');
 
 a = -1;
+
 document.write('a = -1 , это больше чем 0? <br>');
 
-if (a > 0) {
-    console.log('Верно');
-    document.write('<i>Верно</i><br>');
-} else {
-    console.log('Неверно')
-    document.write('<i>Неверно</i><br>');
-}
-
+(a > 0) ? console.log('Верно') : console.log('Неверно');
 
 // 5. Создайте переменные a=10 и b=2. Выведите их сумму, разность, произведение,
 // частное, а также, если сумма этих чисел больше 1, то возведите полученную сумму в
