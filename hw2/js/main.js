@@ -194,32 +194,45 @@ console.log(month)
 
 if (month > 0 && month <= 1) {
     monthNumber = 1;
+    document.write('<i>январь</i><br>');
 } else if (month > 1 && month <= 2) {
     monthNumber = 2;
+    document.write('<i>Февраль</i><br>');
 } else if (month > 2 && month <= 3) {
     monthNumber = 3;
+    document.write('<i>Март</i><br>');
 } else if (month > 3 && month <= 4) {
     monthNumber = 4;
+    document.write('<i>Апрель</i><br>');
 } else if (month > 4 && month <= 5) {
     monthNumber = 5;
+    document.write('<i>Май</i><br>');
 } else if (month > 5 && month <= 6) {
     monthNumber = 6;
+    document.write('<i>Июнь</i><br>');
 } else if (month > 6 && month <= 7) {
     monthNumber = 7;
+    document.write('<i>Июль</i><br>');
 } else if (month > 7 && month <= 8) {
     monthNumber = 8;
+    document.write('<i>Август</i><br>');
 } else if (month > 8 && month <= 9) {
     monthNumber = 9;
+    document.write('<i>Сентябрь</i><br>');
 } else if (month > 9 && month <= 10) {
     monthNumber = 10;
+    document.write('<i>Октябри</i><br>');
 } else if (month > 10 && month <= 11) {
     monthNumber = 11;
+    document.write('<i>Ноябрь</i><br>');
 } else if (month > 11 && month <= 12) {
     monthNumber = 12;
+    document.write('<i>Декабрь</i><br>');
 } else {
     monthNumber = 13;
     alert('В году нет сколько дней!');
 }
+
 
 switch (monthNumber) {
     case 12:
