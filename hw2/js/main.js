@@ -60,17 +60,17 @@ document.write('<b>---Task 4---</b><br> В консоли <br>');
 
 let a = 1;
 
-(a > 0) ? console.log('Верно') : console.log('Неверно');
+(a > 0) ? console.log('Верно'): console.log('Неверно');
 
 
 a = 0;
 
-(a > 0) ? console.log('Верно') : console.log('Неверно');
+(a > 0) ? console.log('Верно'): console.log('Неверно');
 
 
 a = -1;
 
-(a > 0) ? console.log('Верно') : console.log('Неверно');
+(a > 0) ? console.log('Верно'): console.log('Неверно');
 
 // 5. Создайте переменные a=10 и b=2. Выведите их сумму, разность, произведение,
 // частное, а также, если сумма этих чисел больше 1, то возведите полученную сумму в
@@ -86,8 +86,9 @@ let b = 2,
     del = a / b,
     umn = a * b,
     summ2 = summ + minus + del + umn;
-
-    document.write(summ + ', ', minus + ',', del + ',', umn  + '<br>');
+    
+console.log(summ, minus, del, umn);
+document.write(summ + ', ', minus + ',', del + ',', umn + '<br>');
 
 if (summ2 > 1) console.log(summ2, summ2 ** 2);
 if (summ2 > 1) document.write(summ2 + ', ', summ2 ** 2 + '<br>');
