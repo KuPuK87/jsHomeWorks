@@ -199,7 +199,7 @@ for (let i = 0; i < n.length; i++) {
     x = +(n[i]);
     sum += x;
     num = i + 1;
-    
+
     document.write(`${x} </br>`)
     console.log(x);
 }
@@ -207,5 +207,12 @@ for (let i = 0; i < n.length; i++) {
 console.log(`Цифр в числе =`, num);
 document.write(`Цифр в числе = ${num}</br>`);
 console.log(`Сумма чисел =`, sum);
-document.write(`Cумма чисел = ${sum}`);
-console.log(`Перевернуть число не смог)`);
+document.write(`Cумма чисел = ${sum}</br>`);
+
+let newStr = '';
+for (let i = n.length - 1; i >= 0; i--) {
+    newStr += n[i];
+}
+
+console.log(newStr);
+document.write(`обратный порядок = ${newStr}`);
