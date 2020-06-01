@@ -199,6 +199,7 @@ for (let i = 0; i < n.length; i++) {
     x = +(n[i]);
     sum += x;
     num = i + 1;
+    
     document.write(`${x} </br>`)
     console.log(x);
 }
