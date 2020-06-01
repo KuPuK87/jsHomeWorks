@@ -209,10 +209,10 @@ document.write(`Цифр в числе = ${num}</br>`);
 console.log(`Сумма чисел =`, sum);
 document.write(`Cумма чисел = ${sum}</br>`);
 
-let newStr = '';
+let revStr = '';
 for (let i = n.length - 1; i >= 0; i--) {
-    newStr += n[i];
+    revStr += n[i];
 }
 
-console.log(newStr);
-document.write(`обратный порядок = ${newStr}`);
+console.log(revStr);
+document.write(`обратный порядок = ${revStr}`);
