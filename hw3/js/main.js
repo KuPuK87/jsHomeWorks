@@ -204,15 +204,16 @@ for (let i = 0; i < n.length; i++) {
     console.log(x);
 }
 
-console.log(`Цифр в числе =`, num);
-document.write(`Цифр в числе = ${num}</br>`);
-console.log(`Сумма чисел =`, sum);
-document.write(`Cумма чисел = ${sum}</br>`);
-
 let revStr = '';
 for (let i = n.length - 1; i >= 0; i--) {
     revStr += n[i];
 }
+
+console.log(`Цифр в числе =`, num);
+document.write(`Цифр в числе = ${num}</br>`);
+
+console.log(`Сумма чисел =`, sum);
+document.write(`Cумма чисел = ${sum}</br>`);
 
 console.log(revStr);
 document.write(`обратный порядок = ${revStr}`);
