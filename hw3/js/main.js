@@ -104,7 +104,7 @@ a = 10;
 for (let i = 2; i <= a; i++) {
 
     for (let b = 1; b <= 10; b++) {
-        umn = b * i;
+        umn = i * b;
         console.log(`${i}*${b} = ${umn}`);
         document.write(`${i}*${b} = ${umn}</br>`);
     }
@@ -123,8 +123,8 @@ let num = 0;
 
 for (let n = 1000; n >= 50; num++) {
     n = n / 2;
-    document.write(num + ' - ');
-    document.write(n + '<br/>');
+
+    document.write(`${num}  -  ${n} <br/>`);
     console.log(`${num} - ${n} \n`);
 }
 
@@ -134,30 +134,30 @@ console.log(num);
 
 // 8. Запустите цикл, в котором пользователю предлагается вводить число с клавиатуры, до тех пор, пока не будет введена пустая строка или 0. После выхода из цикла выведите общую сумму и среднее арифметическое введённых чисел. Если пользователь ввел не число, то вывести сообщение об ошибке ввода. При подсчете учесть, что пользователь может ввести отрицательное значение.
 
-console.log('---Task 8---');
-document.write('</br><b>---Task 8---</b></br>');
+// console.log('---Task 8---');
+// document.write('</br><b>---Task 8---</b></br>');
 
-let amount = 0;
-for (i = 0;; i++) {
-    let user = Number(prompt("Введите число"));
+// let amount = 0;
+// for (i = 0;; i++) {
+//     let user = Number(prompt("Введите число"));
 
-    console.log(user);
+//     console.log(user);
 
-    if (user == 0) {
-        break;
-    } else if (user) {
-        amount = +amount + +user;
-    } else {
-        alert('Это не число!')
-    }
-}
+//     if (user == 0) {
+//         break;
+//     } else if (user) {
+//         amount = +amount + +user;
+//     } else {
+//         alert('Это не число!')
+//     }
+// }
 
-let average = amount / i;
+// let average = amount / i;
 
-console.log(i, amount, average)
-document.write(`Количество введеных чисел - <b>${i}</b> </br>`);
-document.write(`Сумма введеных чисел - <b>${amount}</b> </br>`);
-document.write(`Среднее арифметическое введеных чисел - <b>${average}</b>`);
+// console.log(i, amount, average)
+// document.write(`Количество введеных чисел - <b>${i}</b> </br>`);
+// document.write(`Сумма введеных чисел - <b>${amount}</b> </br>`);
+// document.write(`Среднее арифметическое введеных чисел - <b>${average}</b>`);
 
 
 // 9. Дана строка с числами разделенными пробелами «4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57». Найдите самое большое и самое маленькое число в строке, используя цикл.
@@ -171,7 +171,6 @@ let str = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57',
     cur = '';
 for (let i = 0; i < str.length; i++) {
     cur += str[i];
-    // console.log(str[i]);
     if (+str[i] && !+str[i + 1]) {
         if (typeof min !== 'number' || cur < +min) min = +cur;
         if (typeof max !== 'number' || cur > +max) max = +cur;
@@ -179,24 +178,33 @@ for (let i = 0; i < str.length; i++) {
     }
 }
 console.log('Min:', min, 'Max:', max)
-document.write(`Минимальное число: ${min}, Максимальное число: ${max}`)
+document.write(`Минимальное число: ${min}, Максимальное число: ${max}</br>`)
 
 
 // Дано произвольное целое число n. Написать программу, которая:
-// a. разбивает число n на цифры и выводит их на экран;
-// b. подсчитывает сколько цифр в числе n;
-// c. находит сумму цифр числа n;
+// a. разбивает число n на цифры и выводит их на экран; +
+// b. подсчитывает сколько цифр в числе n; +
+// c. находит сумму цифр числа n;  + 
 // d. меняет порядок цифр числа n на обратный.
 // Пример: вводится число 123: цифр в числе = 3; сумма = 6; обратный порядок 321.
 
 console.log('---Task 10---');
-document.write('</br><b>---Task 10---</b></br>');
+document.write('</><b>---Task 10---</b></br>');
 
+n = prompt('Введите число');
+sum = 0;
+num = 0;
 
-// n = prompt('Введите число');
+for (let i = 0; i < n.length; i++) {
+    x = +(n[i]);
+    sum += x;
+    num = i + 1;
+    document.write(`${x} </br>`)
+    console.log(x);
+}
 
-// for (let i = 0; i < n.length; i++) {
-//     j = parseInt(n[i]);
-//     document.write(`${j}`)
-//     console.log(j)
-// }
+console.log(`Цифр в числе =`, num);
+document.write(`Цифр в числе = ${num}</br>`);
+console.log(`Сумма чисел =`, sum);
+document.write(`Cумма чисел = ${sum}`);
+console.log(`Перевернуть число не смог)`);
