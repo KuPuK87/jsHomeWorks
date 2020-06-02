@@ -43,9 +43,11 @@ document.write('</br><b>---Task 3---</b></br>');
 
 
 let sum = 0;
+
 for (let i = 0; i <= 100; i++) {
     sum += i;
 }
+
 console.log(sum);
 document.write(`Сумма чисел от 0 до 100 = <b>${sum}</b>`);
 
@@ -60,9 +62,11 @@ sum = 0;
 
 for (let i = 1; i <= a; i++) {
     sum = 0;
+
     for (let b = 1; b <= i; b++) {
         sum += b;
     }
+
     console.log(`сумма чисел в числе ${i}  = ${sum}`);
     document.write(`сумма чисел в числе ${i}  = <b>${sum}</b> </br>`);
 }
@@ -76,6 +80,7 @@ document.write('</br><b>---Task 5---</b></br>');
 i = 8;
 
 while (i <= 56) {
+
     if (i % 2 === 0) {
         console.log(i);
         document.write(`${i},`);
@@ -87,6 +92,7 @@ console.log('____________');
 document.write('</br>');
 
 for (i = 8; i <= 56; i++) {
+
     if (i % 2 == 0) {
         console.log(i);
         document.write(`${i},`);
@@ -122,6 +128,7 @@ document.write('</br><b>---Task 7---</b></br>');
 let num = 0;
 
 for (let n = 1000; n >= 50; num++) {
+
     n = n / 2;
 
     document.write(`${num}  -  ${n} <br/>`);
@@ -138,7 +145,9 @@ console.log(num);
 // document.write('</br><b>---Task 8---</b></br>');
 
 // let amount = 0;
+
 // for (i = 0;; i++) {
+
 //     let user = Number(prompt("Введите число"));
 
 //     console.log(user);
@@ -165,20 +174,31 @@ console.log(num);
 console.log('---Task 9---');
 document.write('</br><b>---Task 9---</b></br>');
 
-let str = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57',
-    min,
-    max,
-    cur = '';
+str = "4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57",
+    currentNumber = "",
+    minNumber = str[0],
+    maxNumber = str[0];
+
 for (let i = 0; i < str.length; i++) {
-    cur += str[i];
-    if (+str[i] && !+str[i + 1]) {
-        if (typeof min !== 'number' || cur < +min) min = +cur;
-        if (typeof max !== 'number' || cur > +max) max = +cur;
-        cur = '';
+
+    currentNumber += str[i] + "";
+
+    if (str[i] == " " || i == str.length - 1) {
+        // console.log(currentNumber);
+        if (parseInt(currentNumber) < minNumber) {
+            minNumber = currentNumber;
+        }
+
+        if (parseInt(currentNumber) > maxNumber) {
+            maxNumber = currentNumber;
+        }
+
+        currentNumber = "";
     }
 }
-console.log('Min:', min, 'Max:', max)
-document.write(`Минимальное число: ${min}, Максимальное число: ${max}</br>`)
+
+console.log(`Min: `, minNumber, `Max: `, maxNumber);
+document.write(`Минимальное число: ${minNumber}, Максимальное число:  ${maxNumber}</br>`);
 
 
 // Дано произвольное целое число n. Написать программу, которая:
@@ -196,6 +216,7 @@ sum = 0;
 num = 0;
 
 for (let i = 0; i < n.length; i++) {
+
     x = +(n[i]);
     sum += x;
     num = i + 1;
@@ -204,7 +225,8 @@ for (let i = 0; i < n.length; i++) {
     console.log(x);
 }
 
-let revStr = '';
+let revStr = "";
+
 for (let i = n.length - 1; i >= 0; i--) {
     revStr += n[i];
 }
