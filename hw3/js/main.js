@@ -141,32 +141,32 @@ console.log(num);
 
 // 8. Запустите цикл, в котором пользователю предлагается вводить число с клавиатуры, до тех пор, пока не будет введена пустая строка или 0. После выхода из цикла выведите общую сумму и среднее арифметическое введённых чисел. Если пользователь ввел не число, то вывести сообщение об ошибке ввода. При подсчете учесть, что пользователь может ввести отрицательное значение.
 
-// console.log('---Task 8---');
-// document.write('</br><b>---Task 8---</b></br>');
+console.log('---Task 8---');
+document.write('</br><b>---Task 8---</b></br>');
 
-// let amount = 0;
+let amount = 0;
 
-// for (i = 0;; i++) {
+for (i = 0;; i++) {
 
-//     let user = Number(prompt("Введите число"));
+    let user = Number(prompt("Введите число"));
 
-//     console.log(user);
+    console.log(user);
 
-//     if (user == 0) {
-//         break;
-//     } else if (user) {
-//         amount = +amount + +user;
-//     } else {
-//         alert('Это не число!')
-//     }
-// }
+    if (user == 0) {
+        break;
+    } else if (user) {
+        amount = +amount + +user;
+    } else {
+        alert('Это не число!')
+    }
+}
 
-// let average = amount / i;
+let average = amount / i;
 
-// console.log(i, amount, average)
-// document.write(`Количество введеных чисел - <b>${i}</b> </br>`);
-// document.write(`Сумма введеных чисел - <b>${amount}</b> </br>`);
-// document.write(`Среднее арифметическое введеных чисел - <b>${average}</b>`);
+console.log(i, amount, average)
+document.write(`Количество введеных чисел - <b>${i}</b> </br>`);
+document.write(`Сумма введеных чисел - <b>${amount}</b> </br>`);
+document.write(`Среднее арифметическое введеных чисел - <b>${average}</b>`);
 
 
 // 9. Дана строка с числами разделенными пробелами «4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57». Найдите самое большое и самое маленькое число в строке, используя цикл.
