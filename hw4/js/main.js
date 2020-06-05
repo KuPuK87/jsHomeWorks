@@ -187,6 +187,9 @@ document.write('</br><b>---Task 9---</b></br>');
 
 let arrNull = [5, 9, 21, , , 9, 78, , , , 6],
     count = 0;
+    
+    document.write(`Массив = ${arrNull} </br>`)
+
 
 for (let i = 0; i < arrNull.length; i++) {
 
@@ -208,6 +211,8 @@ let arrZero = [1, 8, 0, 13, 76, 8, 7, 0, 22, 0, 2, 3, 2], // [48,9,0,4,21,2,1,0,
     lastZero,
     nulCount = 0,
     summZero = 0;
+
+    document.write(`Массив = ${arrZero} </br>`)
 
 for (let i = 0; i <= arrZero.length; i++) {
 
@@ -250,14 +255,15 @@ document.write(`Сумма элементов массива между край
 console.log('---Task 11---');
 document.write('</br><b>---Task 11---</b></br>');
 
-let height = +prompt(`Введите высоту`),
+let height = +prompt(`Введите высоту треугольника`),
     j,
     str = [];
 
 for (i = 0; i <= height; i++) {
 
     for (j = 0; j < height + i; j++) {
-        if (j <= (height - i)) {
+
+        if (j <= height - i) {
             str.push(' ');
             document.write(' ');
         } else {
