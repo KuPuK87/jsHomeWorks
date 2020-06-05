@@ -119,7 +119,8 @@ document.write(`Последний элемент массива = ${lastArrRand
 console.log('---Task 7---');
 document.write('</br><b>---Task 7---</b></br>');
 
-let arrUser = [];
+let arrUser = [],
+    temp;
 
 for (i = 0;; i++) {
 
@@ -133,7 +134,7 @@ for (i = 0;; i++) {
     if ((arrUser[i][0] >= 'a' && arrUser[i][0] <= 'z') || (arrUser[i][0] >= 'а' && arrUser[i][0] <= 'я') || (arrUser[i][0] >= 'A' && arrUser[i][0] <= 'Z') || (arrUser[i][0] >= 'А' && arrUser[i][0] <= 'Я')) {
         alert('Это не цифра!');
         arrUser.pop();
-
+        i--;
     }
 }
 
@@ -190,14 +191,82 @@ let arrNull = [5, 9, 21, , , 9, 78, , , , 6],
 for (let i = 0; i < arrNull.length; i++) {
 
     if (arrNull[i] == undefined) {
-            count++;
+        count++;
+    }
+}
+
+console.log(count);
+document.write(`Количество нулевых (пустых) элементов в целочисленном массиве = ${count} </br>`)
+
+// 10. Найдите сумму элементов массива между двумя нулями (первым и последним нулями в массиве). Если двух нулей нет в массиве, то выведите ноль. В массиве может быть более 2х нулей. Пример массива: [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2] или [1,8,0,13,76,8,7,0,22,0,2,3,2].
+
+console.log('---Task 10---');
+document.write('</br><b>---Task 10---</b></br>');
+
+let arrZero = [1, 8, 0, 13, 76, 8, 7, 0, 22, 0, 2, 3, 2], // [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2];
+    firstZero,
+    lastZero,
+    nulCount = 0,
+    summZero = 0;
+
+for (let i = 0; i <= arrZero.length; i++) {
+
+    if (arrZero[i] == 0) {
+        firstZero = i;
+        nulCount++;
+        arrZero.splice(0, firstZero + 1);
+        arrZero = arrZero.reverse();
+        break;
+    }
+}
+
+for (let i = 0; i <= arrZero.length; i++) {
+
+    if (arrZero[i] == 0) {
+        lastZero = i;
+        nulCount++;
+        arrZero.splice(0, lastZero + 1);
+        break;
+    }
+}
+
+if (nulCount >= 2) {
+
+    for (let i = 0; i < arrZero.length; i++) {
+        summZero += arrZero[i];
+    }
+
+} else {
+    summZero = 0;
+}
+
+console.log(summZero);
+document.write(`Сумма элементов массива между крайними нулями  = ${summZero} </br>`)
+
+
+
+// 11. *** Нарисовать равнобедренный треугольник из символов ^. Высоту выбирает пользователь. Например: высота = 5.
+
+console.log('---Task 11---');
+document.write('</br><b>---Task 11---</b></br>');
+
+let height = +prompt(`Введите высоту`),
+    j,
+    str = [];
+
+for (i = 0; i <= height; i++) {
+
+    for (j = 0; j < height + i; j++) {
+        if (j <= (height - i)) {
+            str.push(' ');
+            document.write(' ');
+        } else {
+            str.push('^');
+            document.write('^');
         }
     }
 
-    console.log(count);
-    document.write(`Количество нулевых (пустых) элементов в целочисленном массиве = ${count} </br>`)
-
-    // 10. Найдите сумму элементов массива между двумя нулями (первым и последним нулями в массиве). Если двух нулей нет в массиве, то выведите ноль. В массиве может быть более 2х нулей. Пример массива: [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2] или [1,8,0,13,76,8,7,0,22,0,2,3,2].
-
-    console.log('---Task 10---');
-    document.write('</br><b>---Task 10---</b></br>');
+    console.log(str.join(''));
+    document.write('</br>');
+    str = [];
+}
