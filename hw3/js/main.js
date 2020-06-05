@@ -211,10 +211,10 @@ document.write(`Минимальное число: ${minNumber}, Максима�
 console.log('---Task 10---');
 document.write('</><b>---Task 10---</b></br>');
 
-n = prompt('Введите число'),
-    sum = 0,
-    num = 0,
-    x;
+n = prompt('Введите число');
+sum = 0;
+num = 0;
+let x;
 
 for (let i = 0; i < n.length; i++) {
 
