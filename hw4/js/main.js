@@ -260,9 +260,9 @@ let height = +prompt(`Введите высоту треугольника`),
     j,
     str = [];
 
-for (i = 0; i <= height; i++) {
+for (let i = 0; i <= height; i++) {
 
-    for (j = 0; j < height + i; j++) {
+    for (let j = 0; j < height + i; j++) {
 
         if (j <= height - i) {
             str.push(' ');
