@@ -114,8 +114,6 @@ function printTriangle2(h, isReverse) {
 
 if (confirm('Вывести перевёрнутый треугольник?')) printTriangle2(height, true);
 
-printTriangle2(height);
-
 
 // 3. Напишите ф-цию, которая должна проверить правильность ввода адреса эл. почты.
 // Почта верна при условии:
