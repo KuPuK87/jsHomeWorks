@@ -1,4 +1,4 @@
-// Дана строка 'aaa@bbb@ccc'. Замените все @ на '!' с помощью глобального поиска и замены.
+// 1. Дана строка 'aaa@bbb@ccc'. Замените все @ на '!' с помощью глобального поиска и замены.
 
 console.log('----Task 1----');
 
@@ -20,6 +20,7 @@ console.log(newStr);
 
 
 // 3. Дана строка 'я учу javascript!'. Вырежите из нее слово 'учу' и слово 'javascript'тремя разными способами (через substr, substring, slice).
+
 console.log('----Task 3----');
 
 str = 'я учу javascript!';
@@ -51,6 +52,7 @@ console.log(Math.sqrt(a));
 // 5. Даны переменные a и b. Отнимите от a переменную b и результат присвойте переменной c.
 // Сделайте так, чтобы в любом случае в переменную c записалось положительное значение.
 // Проверьте работу скрипта при a и b, равных соответственно 3 и 5, 6 и 1.
+
 console.log('----Task 5----');
 
 a = 3;
@@ -68,6 +70,7 @@ console.log(c);
 
 // 6. Выведите на экран текущую дату-время в формате '12:59:59 31.12.2014'. Для решения этой задачи напишите функцию, которая будет добавлять 0 перед днями и месяцами, которые
 // состоят из одной цифры (из 1.9.2014 сделает 01.09.2014).
+
 console.log('----Task 6----');
 
 date = new Date(),
@@ -110,14 +113,12 @@ function strictCheck(phone) {
     RegExp = /^\+(\d{1,3})-(\d{1,3})-(\d{7,8})$/g;
 
     if (RegExp.test(phone)) {
-        console.log(true);
         return true
     } else {
-        console.log(false);
         return false
     }
 }
-strictCheck(phoneNumber);
+console.log(strictCheck(phoneNumber));
 
 
 // 9. Напишите ф-цию, которая из полного адреса с параметрами и без, например:https://tech.onliner.by/2018/04/26/smart-do-200/?utm_source=main_tile&utm_medium=smartdo200#zag3 , получит адрес доменного имени (https://tech.onliner.by), остальную часть адреса без параметров (/2018/04/26/smart-do-200/),параметры (utm_source=main_tile&utm_medium=smartdo200) и хеш (#zag3).В адресе может и не быть каких-либо составляющих. Ф-ция должна возвращать массив.
@@ -134,7 +135,6 @@ function getUrl(url) {
         hash = url.match(/#(\w*.)*/g);
 
     return [domenName, withoutParameters, parameters, hash]
-
 }
 console.log(getUrl(url));
 
@@ -142,7 +142,6 @@ console.log(getUrl(url));
 // 10. Напишите ф-цию удаления повторов из строки, в т.ч. повторных пробелов (2х и более) и спецсимволов, например: «hello hello hello hello world» -> «hello world». Функция должна  возвращать обработанную строку.
 
 console.log('----Task 10----');
-
 
 str = 'hello  %% hello     && hello ??    ++ hello -- !! world 1   hello world 1   ) ';
 
@@ -155,7 +154,7 @@ function removeDuplicate(str) {
     str = str.split(' ');
 
     let result = [];
-    
+
     for (let i = 0; i < str.length; i++) {
         if (result.indexOf(str[i]) == -1) result.push(str[i]);
     }
