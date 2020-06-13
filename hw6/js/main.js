@@ -61,9 +61,9 @@ let b = 5,
 
 console.log(c);
 
-a = 6,
-    b = 1,
-    c = Math.abs(a - b);
+a = 6;
+b = 1;
+c = Math.abs(a - b);
 
 console.log(c);
 
@@ -73,15 +73,15 @@ console.log(c);
 
 console.log('----Task 6----');
 
-date = new Date(),
-    hours = date.getHours(),
+date = new Date();
+let hours = date.getHours(),
     minute = date.getMinutes(),
     sec = date.getSeconds(),
     day = date.getDate(),
     month = date.getMonth() + Number(1),
-    year = date.getFullYear(),
+    year = date.getFullYear();
 
-    console.log(`${hours}:${minute}:${sec} ${getZero(day)}.${getZero(month)}.${year}`);
+
 
 function getZero(number) {
 
@@ -90,8 +90,9 @@ function getZero(number) {
     } else {
         return number;
     }
-};
+}
 
+console.log(`${hours}:${minute}:${sec} ${getZero(day)}.${getZero(month)}.${year}`);
 
 // 7. Дана строка 'aa aba abba abbba abca abea'. Напишите регулярку, которая найдет
 // строки aba, abba, abbba по шаблону: буква 'a', буква 'b' любое количество раз, буква 'a'.
