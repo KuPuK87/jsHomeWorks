@@ -111,7 +111,7 @@ console.log('----Task 8----');
 let phoneNumber = '+375-29-1234567'
 
 function strictCheck(phone) {
-    RegExp = /^\+(\d{1,3})-(\d{1,3})-(\d{7,8})$/g;
+    RegExp = /^\+(\d{1,3}) ?-?(\d{1,3}) ?-?(\d{7,8})$/g;
 
     if (RegExp.test(phone)) {
         return true
@@ -123,7 +123,7 @@ function strictCheck(phone) {
 phoneNumber2 = '375 29 1234567'
 
 function strict2Check(phone) {
-    RegExp = /^\+?(\d{0,3})\W?(\d{0,3})\W?(\d{7,8})$/g;
+    RegExp = /^\+?(\d{0,3}) ?-?(\d{0,3}) ?-?(\d{7,8})$/g;
 
     if (RegExp.test(phone)) {
         return true
