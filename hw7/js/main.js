@@ -4,7 +4,7 @@ let Lightbulb = function (name) {
         this.name = name;
         this.power = +prompt('Введите мощность лампочки, Вт');
         this.costEnergy = 0.209; //+prompt('Введите стоимость электроэнергии за 1Квт' + '/' + 'ч');
-        
+
         if (confirm('Включить лампочку?')) {
             this.firstDate = prompt('В какое время включена лампочка, в формате 00:00');
             this.secondDate = prompt('В какое время выключена лампочка, в формате 00:00');
@@ -23,6 +23,7 @@ let Lightbulb = function (name) {
         let differentRes,
             hours,
             minuts;
+            
         if (different > 0) {
             differentRes = different;
             hours = Math.floor((differentRes % 86400000) / 3600000);
