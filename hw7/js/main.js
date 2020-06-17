@@ -4,27 +4,48 @@ let Lightbulb = function (name) {
         this.name = name;
         this.power = +prompt('Введите мощность лампочки, Вт');
         this.costEnergy = 0.209; //+prompt('Введите стоимость электроэнергии за 1Квт' + '/' + 'ч');
+        
         if (confirm('Включить лампочку?')) {
-            this.workTime = +prompt('Сколько времени работает лампочка? , ч');
+            this.firstDate = prompt('В какое время включена лампочка, в формате 00:00');
+            this.secondDate = prompt('В какое время выключена лампочка, в формате 00:00');
         } else {
-            this.workTime = 0;
+            console.log('Лампочка "' + this.name + '" не включена');
+            return
         };
 
         this.operation();
     };
 
     this.operation = function () {
-        this.result = (this.power / 1000) * this.costEnergy * this.workTime;
+
+        let getDate = (string) => new Date(0, 0, 0, string.split(':')[0], string.split(':')[1]);
+        let different = (getDate(this.secondDate) - getDate(this.firstDate));
+        let differentRes,
+            hours,
+            minuts;
+        if (different > 0) {
+            differentRes = different;
+            hours = Math.floor((differentRes % 86400000) / 3600000);
+            minuts = Math.round(((differentRes % 86400000) % 3600000) / 60000);
+        } else {
+            differentRes = Math.abs((getDate(this.firstDate) - getDate(this.secondDate)));
+            hours = Math.floor(24 - (differentRes % 86400000) / 3600000);
+            minuts = Math.round(60 - ((differentRes % 86400000) % 3600000) / 60000);
+        }
+
+        this.totalTime = hours + (minuts / 60)
+
+        this.result = (this.power / 1000) * this.costEnergy * this.totalTime;
 
         this.show();
     };
 
     this.show = function () {
 
-        if (this.workTime == 0 || this.workTime == undefined) {
-            console.log('Лампочка "' + this.name + '" не включена');
+        if (this.result > 0) {
+            console.log('Лампочка "' + this.name + '" проработала - ' + this.totalTime + 'ч, и стоимость потраченой электроэнергии составляет = ' + this.result + 'р.');
         } else {
-            console.log(`Лампочка "${this.name}" проработала ${this.workTime} ч. и стоимость потраченной электроэнергии составляет = ${this.result} p.`)
+            console.log('Лампочка "' + this.name + '" не включена');
         }
     };
 };
@@ -34,8 +55,3 @@ lightBulb.get();
 
 let lightBulb2 = new Lightbulb('Коридор');
 lightBulb2.get();
-
-
-let totalCost = lightBulb.result + lightBulb2.result;
-
-console.log(`Всего стоимость потраченной электроэнергии составляет - ${totalCost} р.`);
