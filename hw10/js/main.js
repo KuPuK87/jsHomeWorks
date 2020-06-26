@@ -12,8 +12,8 @@ let Lightbulb = function (name) {
             this.secondDate = prompt('В какое время выключена лампочка, в формате 00:00');
         } else {
             console.log('Лампочка "' + this.name + '" не включена');
-            return
-        };
+            return;
+        }
 
         this.operation();
     };
@@ -77,21 +77,21 @@ let Conditioning = function (power, status) {
             this.secondDate = prompt('В какое время выключен кондиционер, в формате 00:00');
         } else {
             console.log('Кондиционер не включен');
-            return
-        };
+            return;
+        }
 
         let RegExp = /\d{2}:\d{2}/;
 
         if (!(RegExp.test(this.firstDate)) || !(RegExp.test(this.secondDate))) {
             console.log('Кондиционер не включен');
-            return
+            return;
         }
 
         this.mode();
     };
 
     this.mode = function () {
-        
+
         this.selectMode = +prompt('Введите режим работы - 1, 2, 3, 4, 5');
 
         switch (this.selectMode) {
@@ -116,24 +116,23 @@ let Conditioning = function (power, status) {
         }
 
         this.totalPower();
-
-    }
+    };
 
     this.totalPower = function () {
 
         if (confirm('Включить кондиционер на обогрев?')) {
             this.power = this.power * this.powerMode;
-            console.log('Кондиционер включен на обогрев')
+            console.log('Кондиционер включен на обогрев');
         } else {
             this.power = 0.7 * this.power * this.powerMode;
-            console.log('Кондиционер включен на охлаждение')
-        };
+            console.log('Кондиционер включен на охлаждение');
+        }
 
         this.operation();
     };
-
 };
 
 
 let conditioning = new Conditioning(prompt('Введите мощность кондиционера?'), confirm('Включить кондиционер?'));
+
 conditioning.get();
