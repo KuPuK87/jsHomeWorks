@@ -37,8 +37,10 @@ let Lightbulb = function (name) {
         }
 
         this.totalTime = hours + (minuts / 60);
+        this.totalTime = this.totalTime.toFixed(2);
 
         this.result = (this.power / 1000) * this.costEnergy * this.totalTime;
+        this.result = this.result.toFixed(2);
 
         this.show();
     };
