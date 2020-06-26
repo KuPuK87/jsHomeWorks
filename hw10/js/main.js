@@ -78,15 +78,15 @@ let Conditioning = function (power, status) {
             console.log('Кондиционер не включен');
             return
         };
-
+      
+        if (this.firstDate == '' || this.secondDate == '') {
+            console.log('Кондиционер не включен');
+            return
+        }
         this.totalPower();
     };
 
     this.totalPower = function () {
-        if (this.totalTime == undefined) {
-            console.log('Кондиционер не включен');
-            return
-        }
 
         if (confirm('Включить кондиционер на обогрев?')) {
             this.power = this.power;
