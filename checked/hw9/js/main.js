@@ -53,7 +53,6 @@ document.querySelector('.field_todo').addEventListener('keydown', function (e) {
 document.querySelector('.clean').addEventListener('click', function () {
     let field = document.querySelector('.todo');
     field.innerHTML = "";
-    localStorage.removeItem('todo', field.innerHTML);
 });
 
 function addTodo(field) {
