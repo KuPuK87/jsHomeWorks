@@ -134,7 +134,6 @@ let Conditioning = function (power, status) {
     };
 };
 
-
 let conditioning = new Conditioning(prompt('Введите мощность кондиционера?'), confirm('Включить кондиционер?'));
 
 conditioning.get();
