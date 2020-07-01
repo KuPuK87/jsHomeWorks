@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Js_icon.ico" type="image/x-icon">
+    <title>HW11 JS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e1b9e38b4f.js" crossorigin="anonymous"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Список контактов</h1>
+        <form id="contact-form">
+            <div>
+                <label for="name">Имя</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for="surname">Фамилия</label>
+                <input type="text" id="surname">
+            </div>
+            <div>
+                <label for="phone">Номер телефона</label>
+                <input type="text" id="phone">
+            </div>
+            <div>
+                <input type="submit" value="Добавить контакт">
+            </div>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Номер телефона</th>
+                    <th>Опции</th>
+                </tr>
+            </thead>
+            <tbody id="contact-list">
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

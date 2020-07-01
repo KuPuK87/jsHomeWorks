@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #525252;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 72px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+}
+
+#contact-form {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contact-form div {
+    width: 30%;
+}
+
+label {
+    font-size: 25px;
+}
+
+input {
+    margin: 10px;
+}
+
+input[type="text"] {
+    text-align: center;
+    width: 80%;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    text-indent: 20px;
+    color: #fff;
+    transition: all 0.3s;
+    border-bottom: 1px solid #fff;
+}
+
+input[type="text"]:focus {
+    border-bottom: 1px solid #9b9999;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+    color: #fff;
+}
+
+input[type="submit"] {
+    font-size: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    background: #525252;
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+input[type="submit"]:hover {
+    color: rgb(141, 137, 137);
+    border: solid 1px rgb(141, 137, 137);
+}
+
+table {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+thead tr th {
+    border-bottom: 1px solid rgb(141, 137, 137);
+    border-left: 1px solid rgb(141, 137, 137);
+    padding: 10px 20px;
+}
+
+thead tr th:first-child {
+    border-left: none;
+}
+
+thead tr th,
+tbody tr td {
+    width: 32%;
+    font-size: 20px;
+    text-align: center;
+}
+
+tbody tr td {
+    padding-top: 20px;
+    color: #c2abab;
+}
+
+.delete::before {
+    font-family: 'FontAwesome';
+    content: '\f2ed';
+    color: #c2abab;
+}
+
+.delete:hover::before {
+    color: red;
+}
+
+.success,
+.error {
+    position: absolute;
+    text-align: center;
+    right: calc(50% - 180px);
+    top: 0;
+    color: white;
+    padding: 15px;   
+    font-size: 20px;
+    border-radius: 10px;
+    width: 350px;
+    height: 50px;
+    opacity: 0.8;
+}
+.success {
+    background: green;
+}
+
+.error {
+    background: red;
+}
