@@ -36,7 +36,7 @@
                 inputPassword === autInfo.password) {
                 document.cookie = 'auth=true';
                 document.cookie = 'authLogin=' + inputLogin;
-                window.location = '/app.html';
+                window.location = './app.html';
             } else {
                 alert();
             }
@@ -144,9 +144,9 @@
             location.reload()
         };
 
-        if (window.location.pathname == '/app.html' && !getCookie('auth')) window.location = '/index.html';
+        if (window.location.pathname == './app.html' && !getCookie('auth')) window.location = '/index.html';
 
-        if (window.location.pathname == '/index.html' && getCookie('auth') === 'true') window.location = '/app.html';
+        if (window.location.pathname == './index.html' && getCookie('auth') === 'true') window.location = '/app.html';
 
         let buttonSignin = document.querySelector('.form .signin'),
             buttonLogout = document.querySelector('.contacts .logout');
