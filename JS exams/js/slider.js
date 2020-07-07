@@ -67,5 +67,4 @@ class Slider {
             this.stopSlideShow();
         }
     }
-    
 }
