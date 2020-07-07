@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Morganite-ExtraBold';
+    src: url('../fonts/Morganite-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Morganite-Medium';
+    src: url('../fonts/Morganite-Medium.ttf');
+}
+
+
 * {
     margin: 0;
     bottom: 0;
@@ -19,10 +29,6 @@ body {
         linear-gradient(135deg, #670d10 0%, #092756 100%);
 }
 
-img {
-    max-width: 100%;
-}
-
 ul {
     list-style: none;
     padding: 0;
@@ -32,6 +38,7 @@ ul {
 .slider {
     position: relative;
     width: 99%;
+    max-width: 1920px;
     margin: 6% auto;
 }
 
@@ -64,7 +71,7 @@ ul {
 }
 
 .slider_li_active .slider_img {
-    animation: cssAnimation 4s 1 ease-in-out;
+    animation: cssAnimation 3s 1 ease-in-out;
 }
 
 @keyframes cssAnimation {
@@ -81,6 +88,30 @@ ul {
     }
 }
 
+h2 {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    color: #fff;
+    font-size: 100px;
+    mix-blend-mode: overlay;
+    filter: invert(1) grayscale(1) contrast(9);
+    transition: opacity .4s linear;
+    font-family: 'Morganite-ExtraBold';
+}
+
+.slider_li p {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 40%;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    opacity: 1;
+    mix-blend-mode: difference;
+    font-family: 'Morganite-medium';
+}
+
 .slider_buttons {
     color: #fff;
     position: absolute;
@@ -89,7 +120,6 @@ ul {
 
 .slider_buttons:hover {
     color: red;
-
     transition: color .4s linear;
 }
 
@@ -155,4 +185,10 @@ ul {
 
 .slider_pages-li:first-child {
     margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .slider_li p {
+        width: 80%;
+    }
 }

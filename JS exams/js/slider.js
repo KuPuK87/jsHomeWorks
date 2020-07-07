@@ -1,5 +1,5 @@
 class Slider {
-    constructor(images, buttons, pages, duration = 4000) {
+    constructor(images, buttons, pages, duration = 7000) {
         this.images = images;
         this.buttons = buttons;
         this.pages = pages;
