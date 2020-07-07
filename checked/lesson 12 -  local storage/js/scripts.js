@@ -56,8 +56,8 @@
         let contactsUpdate = function () {
 
             let localContactsData = localStorage.getItem('contactsData');
-            if(localContactsData) {
-                 if (localContactsData.length > 0) contactsData = JSON.parse(localContactsData);
+            if (localContactsData) {
+                if (localContactsData.length > 0) contactsData = JSON.parse(localContactsData);
             }
             let contactsList = document.querySelector('.contacts_list ul');
             contactsList.innerHTML = '';
@@ -71,14 +71,20 @@
                     <div class="name">${contact.name}</div>
                     <div class="phone">${contact.phone}</div>
             `;
-                let del = document.createElement('i');
+                let del = document.createElement('i'),
+                    edit = document.createElement('i');
+                edit.classList.add('fa-edit');
+                edit.classList.add('far');
+
                 del.classList.add('fa-trash');
                 del.classList.add('fa');
+                elemContact.appendChild(edit);
                 elemContact.appendChild(del);
 
                 contactsList.appendChild(elemContact);
 
                 del.addEventListener('click', contactDel);
+                edit.addEventListener('click', contactEdit);
             });
         };
 
@@ -143,6 +149,16 @@
             localStorage.setItem("contactsData", JSON.stringify(data));
             location.reload()
         };
+
+        const contactEdit = function () {
+
+            let data = JSON.parse(localStorage.getItem("contactsData"));
+            console.log(data);
+
+            localStorage.setItem("contactsData", JSON.stringify(data));
+            // location.reload()
+        };
+
 
         if (window.location.pathname == '/app.html' && !getCookie('auth')) window.location = '/index.html';
 
