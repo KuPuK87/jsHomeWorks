@@ -52,7 +52,7 @@ class Slider {
             }
         }
     }
-
+//слайдшоу
     startSlideShow() {
         this.interval = setInterval(this.nextSlide.bind(this), this.duration);
     }
