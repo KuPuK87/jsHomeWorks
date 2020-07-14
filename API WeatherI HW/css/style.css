@@ -14,7 +14,7 @@ body {
     padding: 5%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
-    background-size: cover!important;
+    /* background-size: cover!important; */
     background-repeat: no-repeat!important;
     overflow: hidden;
 }
