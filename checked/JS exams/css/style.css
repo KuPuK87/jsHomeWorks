@@ -70,24 +70,6 @@ ul {
     transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-.slider_li_active .slider_img {
-    animation: cssAnimation 3s 1 ease-in-out;
-}
-
-@keyframes cssAnimation {
-    from {
-        -webkit-transform: scale(1) translate(0px);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    to {
-        -webkit-transform: scale(1) translate(0px);
-    }
-}
-
 h2 {
     position: absolute;
     top: 40px;
@@ -185,10 +167,4 @@ h2 {
 
 .slider_pages-li:first-child {
     margin-left: 0;
-}
-
-@media screen and (max-width: 768px) {
-    .slider_li p {
-        width: 80%;
-    }
 }
