@@ -21,7 +21,6 @@ setTimeout(function () {
         slider.startSlideShow();
 
         sliderBlock.addEventListener("click", slider.controllerClick.bind(slider));
-        //Отключение слайдшоу при наведении маши на слайдер
         sliderBlock.addEventListener("mouseenter", slider.controllerHover.bind(slider));
         sliderBlock.addEventListener("mouseleave", slider.controllerHover.bind(slider));
     })();
