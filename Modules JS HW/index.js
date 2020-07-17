@@ -2,6 +2,10 @@ import './modules/App.js';
 import Slider from './modules/Slider.js';
 
 
+
+// тут не хватило времени разобраться как управление слайдером подкдючить после загрузки верстки в html - поэтому костыли с таймаутом_) - нужна подсказка_)
+
+
 setTimeout(function () {
     (() => {
         const images = document.querySelectorAll(".slider_li");
