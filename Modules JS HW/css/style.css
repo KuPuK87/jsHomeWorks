@@ -39,6 +39,7 @@ h1 {
     display: inline-block;
     font-weight: 700;
     font-size: 60px;
+    line-height: normal;
     color: #ffffff;
     border-top: 2px #ffffff solid;
     border-bottom: 2px #ffffff solid;
