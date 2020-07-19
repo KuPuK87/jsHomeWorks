@@ -1,27 +1,11 @@
 import load from './Load.js';
 
 class Nav {
-    async get() {
-        return await fetch('/data/Pages.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                let html = '';
-
-                for (const page in data) {
-                    html += `<li><a href="/#${page}">${data[page].title}</a></li>`;
-                }
-
-                return !html ? '' : html;
-            });
-    }
-
     init() {
         const elem = document.createElement('section');
         elem.classList.add('section_navigation');
         elem.id = 'navigation';
-        this.get().then(function(html) {
+
         elem.innerHTML = `
         <div class="container">
                 <div class="navigation">
@@ -34,11 +18,16 @@ class Nav {
                         <span></span>
                     </label>
 
-                    <ul class="nav">${html}</ul>
+                    <ul class="nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#skills">PROMOTING THE SITE</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contacts">Contact us</a></li>
+                    </ul>
                 </div>
             </div>
         `;
-    });
 
         return elem;
     };

@@ -4,7 +4,7 @@ class Skills {
     init() {
         const elem = document.createElement('section');
         elem.classList.add('section_skills');
-        elem.id = 'promoting';
+        elem.id = 'skills';
 
         elem.innerHTML = `
         <div class="container">

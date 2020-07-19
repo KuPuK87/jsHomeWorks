@@ -1,5 +1,5 @@
 export default class Slider {
-    constructor(images, buttons, pages, duration = 4000) {
+    constructor(images, buttons, pages, duration = 7000) {
         this.images = images;
         this.buttons = buttons;
         this.pages = pages;
@@ -16,16 +16,16 @@ export default class Slider {
         this.pages[index].classList.remove("slider_pages-li_active");
     }
     _setIndex(number) {
-        if (number >= this.images.length)
+        if(number >= this.images.length)
             this.index = 0;
-        else if (number < 0)
+        else if(number < 0)
             this.index = this.images.length - 1;
         else
             this.index = number;
     }
     changePage(number) {
         this._removeActiveClass(this.index);
-        if (number >= 0 && number < this.images.length)
+        if(number >= 0 && number < this.images.length)
             this._setIndex(number);
         this._addActiveClass(this.index);
     }
@@ -41,17 +41,30 @@ export default class Slider {
     }
     controllerClick(event) {
         let target = event.target.dataset.target;
-        
-        if (target) {
+        if(target){
             event.preventDefault();
-            if (target.toLowerCase() === "next") {
+            if(target.toLowerCase() === "next") {
                 this.nextSlide();
-            } else if (target.toLowerCase() === "prev") {
+            } else if(target.toLowerCase() === "prev") {
                 this.prevSlide();
-            } else if (target >= "0" && target <= "9") {
+            } else if(target >= "0" && target <= "9") {
                 this.changePage(Number.parseInt(target));
             }
         }
     }
-   
+//слайдшоу
+    startSlideShow() {
+        this.interval = setInterval(this.nextSlide.bind(this), this.duration);
+    }
+    stopSlideShow() {
+        clearInterval(this.interval);
+    }
+    controllerHover() {
+        this.animate = !this.animate;
+        if(this.animate) {
+            this.startSlideShow();
+        } else {
+            this.stopSlideShow();
+        }
+    }
 }

@@ -41,7 +41,6 @@ export default class Slider {
     }
     controllerClick(event) {
         let target = event.target.dataset.target;
-        
         if (target) {
             event.preventDefault();
             if (target.toLowerCase() === "next") {
@@ -53,5 +52,19 @@ export default class Slider {
             }
         }
     }
-   
+    //слайдшоу
+    startSlideShow() {
+        this.interval = setInterval(this.nextSlide.bind(this), this.duration);
+    }
+    stopSlideShow() {
+        clearInterval(this.interval);
+    }
+    controllerHover() {
+        this.animate = !this.animate;
+        if (this.animate) {
+            this.startSlideShow();
+        } else {
+            this.stopSlideShow();
+        }
+    }
 }

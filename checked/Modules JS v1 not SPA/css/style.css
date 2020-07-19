@@ -74,8 +74,11 @@ p {
 .container {
     width: 80%;
     max-width: 1200px;
-    padding: 30px 0;
     margin: 0 auto;
+}
+
+section {
+    padding: 50px 0;
 }
 
 /* HEADER */
@@ -117,7 +120,7 @@ p {
 
 .section_navigation {
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 15px;
     background-color: #CA9FAD;
     position: sticky;
     top: 0;
@@ -388,7 +391,7 @@ ul {
     color: #fff;
     position: absolute;
     top: calc(50% - 25px);
-
+   
 }
 
 .slider_buttons:hover {
@@ -470,14 +473,10 @@ ul {
 }
 
 .contacts {
-    background-color: #252e30;
-}
-
-.contacts_block-body {
     display: flex;
 }
 
-.contacts_block-item {
+.contacts_block {
     width: 50%;
 }
 
@@ -569,6 +568,7 @@ input[type="email"] {
 .footer {
     background-color: #191f21;
     text-align: center;
+    padding: 30px 0;
 }
 
 .footer_text {
